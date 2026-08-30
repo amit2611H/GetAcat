@@ -1,10 +1,31 @@
 {
-  "name": "getAcat",
+  "name": "get-a-cat",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Get a Cat 🐱 — a lightweight demo app for debugging IAM permissions with AuraCloud",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node server/index.js",
+    "dev:client": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "private": true
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.750.0",
+    "canvas-confetti": "^1.9.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "lucide-react": "^0.474.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.6",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "tailwindcss": "^4.0.6",
+    "vite": "^6.1.0"
+  }
 }
