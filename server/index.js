@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 
-const PORT = 3000;
+const PORT = 3002;
 
 const app = express();
 app.use(cors());
